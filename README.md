@@ -1,1 +1,1 @@
-# My_Chrome-Extension
+# Customize Chrome Extension
