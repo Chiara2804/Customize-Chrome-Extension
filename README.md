@@ -1,4 +1,4 @@
-# Customize Chrome Theme Extension 🌑👩‍💻
+# Customize Chrome Extension 🌑👩‍💻
 This extension is avaible on Chrome here: 
 
 ## Features 
