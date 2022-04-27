@@ -10,12 +10,16 @@ This extension is avaible on Chrome here:
 
 ## For Developers
 ### Record the window
-Steps to record the window>
+Steps to record the window:
 <ul>
   <li>Ask the user to select the input source (screen or window) to record.</li>
   <li>Create a MediaRecorder to store the MediaStream.</li>
   <li>Store once the screen recording has stopped.</li>
 </ul>
+
+````
+printf("hello world");
+````
 
 Implementation
 
