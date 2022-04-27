@@ -6,6 +6,7 @@ This extension is avaible on Chrome here:
   <li> Record the window 📹</li>
   <li> Save any page as a single file 📓 </li>
   <li> Color picker 🎨</li>
+  <li> Custom theme 🖌</li>
 </ul> 
 
 ## For Developers
@@ -44,4 +45,7 @@ Steps to record the window:
 Implementation
 
 ### Color picker
+Implementation
+
+### Custom Theme
 Implementation
