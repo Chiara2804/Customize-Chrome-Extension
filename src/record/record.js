@@ -6,27 +6,27 @@ start.addEventListener('click', async function() {
     let stream = await recordScreen();
     let mimeType = 'video/webm';
     mediaRecorder = createRecorder(stream, mimeType);
-    let node = document.createElement("p");
+    let node = document.createElement('p');
     node.textContent = "Started recording";
     document.body.appendChild(node);
-})
+});
 
 stop.addEventListener('click', function() {
     mediaRecorder.stop();
-    let node = document.createElement("p");
+    let node = document.createElement('p');
     node.textContent = "Stopped recording";
     document.body.appendChild(node);
-})
+});
 
 async function recordScreen() {
     return await navigator.mediaDevices.getDisplayMedia({
         audio: true,
-        video: { mediaSource: "screen" }
+        video: { mediaSource: 'screen' }
     });
 }
 
 function createRecorder(stream, mimeType) {
-    // the stream data is stored in this array
+    //media store
     let recordedChunks = [];
 
     const mediaRecorder = new MediaRecorder(stream);
@@ -40,22 +40,22 @@ function createRecorder(stream, mimeType) {
         saveFile(recordedChunks);
         recordedChunks = [];
     };
-    mediaRecorder.start(200); // For every 200ms the stream data will be stored in a separate chunk.
+    //every 200 milliseconds the stream data will ne stored in the recordedChunks array
+    mediaRecorder.start(200);
     return mediaRecorder;
 }
 
 function saveFile(recordedChunks) {
+    const blob = new Blob(recordedChunks, { type: 'video/webm' });
 
-    const blob = new Blob(recordedChunks, {
-        type: 'video/webm'
-    });
-    let filename = window.prompt('Enter file name'),
+    let filename = window.prompt('Enter a name for your video file:'),
         downloadLink = document.createElement('a');
     downloadLink.href = URL.createObjectURL(blob);
-    downloadLink.download = `${filename}.webm`;
+    downloadLink.download = '${filename}.webm';
 
     document.body.appendChild(downloadLink);
     downloadLink.click();
-    URL.revokeObjectURL(blob); // clear from memory
+    URL.revokeObjectURL(blob);
     document.body.removeChild(downloadLink);
+
 }
