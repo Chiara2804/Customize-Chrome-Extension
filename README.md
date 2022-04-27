@@ -13,15 +13,14 @@ This extension is avaible on Chrome here:
 Steps to record the window:
 <ul>
   <li>Ask the user to select the input source (screen or window) to record.</li>
+  ````
+  printf("hello world");
+  ````
   <li>Create a MediaRecorder to store the MediaStream.</li>
   <li>Store once the screen recording has stopped.</li>
 </ul>
 
-````
-printf("hello world");
-````
 
-Implementation
 
 ### Save any page as a single file
 Implementation
