@@ -17,7 +17,7 @@ Steps to record the window:
   <li>Store once the screen recording has stopped.</li>
 </ul>
 
-  ````
+  ```javascript
   function createRecorder(stream, mimeType) {
     //media store
     let recordedChunks = [];
@@ -37,7 +37,7 @@ Steps to record the window:
     mediaRecorder.start(100);
     return mediaRecorder;
 }
-  ````
+  ```
 
 
 ### Save any page as a single file
