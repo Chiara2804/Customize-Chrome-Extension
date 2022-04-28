@@ -1,0 +1,31 @@
+:root {
+    --color-ui-panel: #1F232A;
+    --color-ui-panel-dark: #15292C;
+    --color-ui-panel-light: #2A3147;
+    --color-ui-border: #364347;
+    --color-input-bg: #15191C;
+    --color-swatch-border: #fff;
+    --color-text: #8B949A;
+    --spacer: 10px;
+    --map-height: 200px;
+    --input-height: 40px;
+    --swatch-width: 32px;
+    --swatch-space: 4px;
+    --swatches-width: (6 * --swatch-width) + (5 * --swatch-space);
+    --map-width: --swatches-width;
+    --eyedropper-width: --swatch-width * 2 + --swatch-space;
+    --window-width: --swatches-width + --eyedropper-width + --spacer * 3;
+    --spectrum-cursor-width: 30px;
+}
+
+.color-picker-panel {
+    background: var(--color-ui-panel);
+    width: var(--window-width);
+    border-radius: 8px;
+    border: 2px solid --color-ui-border;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

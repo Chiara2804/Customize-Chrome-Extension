@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style/button.css">
+    <link rel="stylesheet" href="src/record/button.css">
+    <link rel="stylesheet" href="src/color_picker/color-picker.css">
     <link rel="stylesheet" href="style/main.css">
 </head>
 
@@ -11,14 +12,62 @@
         <div class="intro"></div>
         <div id="recBox" class="option">
             <button id="start" class="notRec"></button>
-            <button id="stop" class="notRec"></button> Record screen
+            <button id="stop" class="notRec"></button>Record window
         </div>
         <div class="option">Save this page as a file</div>
-        <div class="option">Colour picker</div>
+        <div class="option">
+            <button id="colors"></button>
+            <div class="color-picker-panel">
+                <div class="panel-row">
+                    <div class="swatches default-swatches"></div>
+                    <button class="button eyedropper">Get Color</button>
+                </div>
+                <div class="panel-row">
+                    <div class="spectrum-map">
+                        <button id="spectrum-cursor" class="color-cursor"></button>
+                        <canvas id="spectrum-canvas"></canvas>
+                    </div>
+                    <div class="hue-map">
+                        <button id="hue-cursor"></button>
+                        <canvas id="hue-canvas"></canvas>
+                    </div>
+                </div>
+                <div class="panel-row">
+                    <div id="rgb-fields" class="field-group value-fields rgb-fields active">
+                        <div class="field-group">
+                            <label for="" class="field-label">R:</label>
+                            <input type="number" max="255" min="0" id="red" class="field-input rgb-input" />
+                        </div>
+                        <div class="field-group">
+                            <label for="" class="field-label">G:</label>
+                            <input type="number" max="255" min="0" id="green" class="field-input rgb-input" />
+                        </div>
+                        <div class="field-group">
+                            <label for="" class="field-label">B:</label>
+                            <input type="number" max="255" min="0" id="blue" class="field-input rgb-input" />
+                        </div>
+                    </div>
+                    <div id="hex-field" class="field-group value-fields hex-field">
+                        <label for="" class="field-label">Hex:</label>
+                        <input type="text" id="hex" class="field-input" />
+                    </div>
+                    <button id="mode-toggle" class="button mode-toggle">Mode</button>
+                </div>
+                <div class="panel-row">
+                    <h2 class="panel-header">User Colors</h2>
+                    <div id="add-swatch" class="button add-swatch"></div>
+                    <button id="add-swatch">
+                        <span id="color-indicator" class="color-indicator"></span>
+                        <span>Add to Swatches</span>
+                    </button>
+                </div>
+            </div>
+            Colour picker</div>
+        <div class="option">Custom your theme with an image</div>
     </div>
 
     <script src="popup.js"></script>
-    <script src="style/button.js"></script>
+    <script src="src/record/button.js"></script>
     <script src="src/record/record.js"></script>
 </body>
 
