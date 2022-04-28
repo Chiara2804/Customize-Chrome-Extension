@@ -34,7 +34,7 @@ Steps to record the window:
         saveFile(recordedChunks);
         recordedChunks = [];
     };
-    //every 200 milliseconds the stream data will ne stored in the recordedChunks array
+    //every 100 milliseconds the stream data will ne stored in the recordedChunks array
     mediaRecorder.start(100);
     return mediaRecorder;
 }
