@@ -9,7 +9,7 @@ This extension is avaible on Chrome here:
   <li> Custom theme 🖌</li>
 </ul> 
 
-## For Developers
+## Functionality and Explaination
 ### Record the window
 Steps to record the window:
 <ul>
