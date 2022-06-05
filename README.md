@@ -47,9 +47,9 @@ Implementation
 ### Color picker
 ```html
 <div id="color-picker">
-            <input type="color" id="head" name="head" value="#e66465">
-            <label for="head">Head</label>
-        </div>
+    <input type="color" id="head" name="head" value="#e66465">
+    <label for="head">Head</label>
+</div>
 ```
 
 ### Custom Theme
