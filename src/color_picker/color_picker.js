@@ -1,4 +1,11 @@
+var app = false;
+
 function disp() {
-    console.log('dispaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-    document.getElementById("color-picker").style.opacity = "1";
+    if (app == false) {
+        document.getElementById("color-picker").style.display = "block";
+        app = true;
+    } else {
+        document.getElementById("color-picker").style.display = "none";
+        app = false;
+    }
 }

@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="src/color_picker/color_picker.css">
     <link rel="stylesheet" href="src/custom_theme/custom-theme.css">
+    <link rel="stylesheet" href="src/save_a_page_as_file/save_page.css">
 </head>
 
-<body>
+<body id="main-background-image">
     <div class="box">
         <div class="intro"></div>
         <div id="recBox" class="option">
@@ -16,12 +17,12 @@
             <button id="stop" class="notRec"></button>Record window
         </div>
         <div class="option">Save this page as a file</div>
-        <!--le funzioni non vanno-->
+        <button onclick="save()">Save</button>
         <div class="option" onclick="disp()">Colour picker</div>
-        <div class="option" onclick="image()">Custom your theme with an image</div>
+        <div class="option" onclick="appear()">Custom your theme with an image</div>
+        <input id="background-image" type="file">
         <div id="color-picker">
             <input type="color" id="head" name="head" value="#e66465">
-            <label for="head">Head</label>
         </div>
     </div>
 
@@ -30,6 +31,7 @@
     <script src="src/record/record.js"></script>
     <script src="src/color_picker/color_picker.js"></script>
     <script src="src/custom_theme/custom-theme.js"></script>
+    <script src="src/save_a_page_as_file/save_page.js"></script>
 </body>
 
 </html>
