@@ -53,4 +53,24 @@ Implementation
 ```
 
 ### Custom Theme
-Implementation
+```html
+<input id="background-image" type="file">
+```
+
+```javascript
+document.getElementById('background-image').addEventListener('change', readURL, true);
+
+function readURL() {
+    var file = document.getElementById('background-image').files[0];
+    var reader = new FileReader();
+    var readFile = reader.readAsDataURL(file);
+
+    reader.onloadend = function() {
+        document.getElementById("main-background-image").style.backgroundImage = "url(" + reader.result + ")";
+    }
+
+    if (file) {
+        readFile;
+    } else {}
+}
+```
